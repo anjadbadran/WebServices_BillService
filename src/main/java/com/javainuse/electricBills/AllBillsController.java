@@ -14,15 +14,16 @@ import springfox.documentation.annotations.Incubating;
 import springfox.documentation.spring.web.json.Json;
 
 @RestController
+
 public class AllBillsController {
 	
 	
-	@RequestMapping(method = RequestMethod.GET, value = "/api/javainuse")
-	public String getAllBills(String billId, String userId) throws JSONException {
+	@RequestMapping(method = RequestMethod.GET, value = "/getAllBills")
+	public String getAllBills( String userId) throws JSONException {
 		AllBills allBills = new AllBills(); 
-		billId="1";
+		//billId="1";
 		userId="1165536";
-		return allBills.getAllBills(billId, userId); 
+		return allBills.getAllBills( userId); 
 	}
 
 }

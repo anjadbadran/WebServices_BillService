@@ -82,7 +82,7 @@ public class  AllBills{
 	public void setWaterPayBeforDate(String waterPayBeforDate) {
 		this.waterPayBeforDate = waterPayBeforDate;
 	}
-	 public String  getAllBills( String billId,String userId ) throws JSONException{
+	 public String  getAllBills(String userId ) throws JSONException{
 //		 JSONObject  allBills = new JSONObject();
 //
 //		 allBills.put("billId", billId); 
@@ -99,11 +99,11 @@ public class  AllBills{
 //	
 //		
 //		 return allBills;
-		 setId(userId);
-		 setBillId(billId);
+		 if( userId== "1165536" )
+		 {
 		 
 		 return  "{"
-			+ "\"All Bills\": { \"id\":\""+ getBillId() + "\"User Id\": { \"id\":\""+ getId() +"\", \"address\":"
+			+ "\"User Id\": { \"userId\":\""+ userId +"\", \"address\":"
 		+ " \"ramallah_al nahda St \",\"Total\": \"206.36\", \"billDetails\": \"This is Electricity and water bill....\",\"Electric Bill\": \"100.76\",\"Water Bill\": \"105.6\", \"electricPublishDate\":"
 		+  new Date(2018-1900, 4, 15 )+","
 		+ "\"electricPayBeforDate\":"
@@ -120,6 +120,8 @@ public class  AllBills{
 		+"}";
 		 
 	 }
+		 else{
+			 return null;
+		 }
 	
-	
-}
+}}
